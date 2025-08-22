@@ -21,15 +21,15 @@ class Solution {
         HashMap<Integer, Integer> hm = new HashMap<>();
         int ans[] = new int[2];
         for(int i = 0; i < nums.length; i++) {
-            int curr = nums[i];
-            int complement = target - curr;
+            int current = nums[i];
+            int complement = target - current;
             if(hm.containsKey(complement) == true) {
                 ans[0] = hm.get(complement);
                 ans[1] = i;
                 return ans;
             }
-            hm.put(curr, i);
+            hm.put(current, i);
         }
-        return new int[] {};
+        return new int[2];
     }
 }
